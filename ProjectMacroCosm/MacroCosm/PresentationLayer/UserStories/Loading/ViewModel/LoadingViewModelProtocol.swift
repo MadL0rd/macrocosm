@@ -5,7 +5,7 @@
 //  Created by Антон Текутов on 30.03.21.
 //
 
-protocol LoadingViewModelProtocol: class {
+protocol LoadingViewModelProtocol: AnyObject {
     
     var userInfo: UserInfo { get }
     

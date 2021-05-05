@@ -6,7 +6,7 @@
 
 import Foundation
 
-protocol HoroscopeNetworkServiceProtocol: class {
+protocol HoroscopeNetworkServiceProtocol: AnyObject {
     
     func getDaylyPrediction(zodiacId: Int, completion: @escaping GetSettingsCompletion)
 }

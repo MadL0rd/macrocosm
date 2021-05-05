@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol UserInfoStorageServiceProtocol: class {
+protocol UserInfoStorageServiceProtocol: AnyObject {
     
     var userInfo: UserInfo { get set }
     

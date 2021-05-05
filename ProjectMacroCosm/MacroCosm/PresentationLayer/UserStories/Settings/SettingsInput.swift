@@ -5,7 +5,7 @@
 //  Created by Антон Текутов on 30.03.2021.
 //
 
-protocol CustomizableSettingsViewModel: class {
+protocol CustomizableSettingsViewModel: AnyObject {
     
     var output: SettingsOutput? { get set }
 }

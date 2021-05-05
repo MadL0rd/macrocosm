@@ -5,6 +5,6 @@
 //  Created by Антон Текутов on 30.03.2021.
 //
 
-protocol AboutUsOutput: class {
+protocol AboutUsOutput: AnyObject {
     
 }

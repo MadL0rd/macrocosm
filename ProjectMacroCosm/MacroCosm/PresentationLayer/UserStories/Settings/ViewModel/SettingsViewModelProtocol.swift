@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SettingsViewModelProtocol: class {
+protocol SettingsViewModelProtocol: AnyObject {
     
     var termsOfUsageUrl: URL? { get }
     var privacyPolicyUrl: URL? { get }

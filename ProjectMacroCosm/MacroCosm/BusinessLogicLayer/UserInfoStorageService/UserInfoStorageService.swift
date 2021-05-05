@@ -14,7 +14,7 @@ fileprivate enum DefaultsKeys: String {
     case location
 }
 
-@objc protocol UserInfoStorageServiceSubscriber: class {
+@objc protocol UserInfoStorageServiceSubscriber: AnyObject {
     
     func needToReloadBorders()
 }

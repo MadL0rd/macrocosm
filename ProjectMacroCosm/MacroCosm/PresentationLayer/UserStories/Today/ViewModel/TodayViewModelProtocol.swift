@@ -5,7 +5,7 @@
 //  Created by Антон Текутов on 30.03.2021.
 //
 
-protocol TodayViewModelProtocol: class {
+protocol TodayViewModelProtocol: AnyObject {
     
     var zodiacPredictionWillChange: (() -> Void)? { get set }
     var zodiacPredictionDidChanged: ((ZodiacPrediction) -> Void)? { get set }

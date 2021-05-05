@@ -37,8 +37,8 @@
 		<string>Gilroy-Regular.ttf</string>
 		<string>Gilroy-Light.ttf</string>
 		<string>Gilroy-Semibold.ttf</string>
-        <string>Gilroy-Bold.ttf</string>
-        <string>Westlake.ttf</string>
+		<string>Gilroy-Bold.ttf</string>
+		<string>Westlake.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

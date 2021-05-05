@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SizeUpdateDelegate: class {
+protocol SizeUpdateDelegate: AnyObject {
     
     func viewSizeWasUpdated(_ view: UIView)
 }

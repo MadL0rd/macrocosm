@@ -5,7 +5,7 @@
 //  Created by Антон Текутов on 01.04.2021.
 //
 
-protocol LocationPickerContainerOutput: class {
+protocol LocationPickerContainerOutput: AnyObject {
     
     func returnUserBirthLocation(_ location: UserBirthLocation)
 }

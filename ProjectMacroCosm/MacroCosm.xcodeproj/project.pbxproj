@@ -301,6 +301,7 @@
 		894066D1261355BB00DC682F /* AboutUsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		894066D2261355BB00DC682F /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		894066DD2613566800DC682F /* Array+isNotEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+isNotEmpty.swift"; sourceTree = "<group>"; };
+		899DE96A26433991001E2C7D /* MacroCosm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacroCosm.entitlements; sourceTree = "<group>"; };
 		89DD264A25DC9F0000AD2868 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		89DD277025DCFB2C00AD2868 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		89DD277125DCFB2C00AD2868 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -401,6 +402,7 @@
 		7DE24187D33E7237A73F2FC5 /* MacroCosm */ = {
 			isa = PBXGroup;
 			children = (
+				899DE96A26433991001E2C7D /* MacroCosm.entitlements */,
 				89F00A4A2542E16200D482F6 /* ApplicationLayer */,
 				8940644626122B7600DC682F /* CoreLayer */,
 				89F00A3A2542E16200D482F6 /* BusinessLogicLayer */,
@@ -1539,7 +1541,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MacroCosm;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1590,6 +1592,7 @@
 			baseConfigurationReference = F1A97D24E1314BC504A0C8C1 /* Pods-MacroCosm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacroCosm/MacroCosm.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LBLG7J3SF4;
@@ -1598,7 +1601,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.atekutov.macrocosm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atekutov.macrocosmapp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_SWIFT3_OBJC_INFERENCE = YES;
@@ -1612,6 +1615,7 @@
 			baseConfigurationReference = 0178F67D52AB8FF4AD0D9547 /* Pods-MacroCosm.adhoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacroCosm/MacroCosm.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LBLG7J3SF4;
@@ -1620,7 +1624,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.atekutov.macrocosm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atekutov.macrocosmapp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_SWIFT3_OBJC_INFERENCE = YES;
@@ -1632,9 +1636,11 @@
 		8FCC798A600016BC6ECD1BC6 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = MacroCosm;
 				SDKROOT = iphoneos;
 			};
 			name = AdHoc;
@@ -1644,6 +1650,7 @@
 			baseConfigurationReference = 678DC1594F1721FA4DC5EFE5 /* Pods-MacroCosm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacroCosm/MacroCosm.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LBLG7J3SF4;
@@ -1652,7 +1659,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.atekutov.macrocosm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atekutov.macrocosmapp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_SWIFT3_OBJC_INFERENCE = YES;
@@ -1683,9 +1690,11 @@
 		FB1389302B5C0CEC6B491693 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = MacroCosm;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};

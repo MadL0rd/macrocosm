@@ -5,7 +5,7 @@
 //  Created by Антон Текутов on 30.03.2021.
 //
 
-protocol CustomizableMainViewModel: class {
+protocol CustomizableMainViewModel: AnyObject {
     
     var output: MainOutput? { get set }
 }
