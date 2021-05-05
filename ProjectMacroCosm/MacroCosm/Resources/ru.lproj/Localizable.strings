@@ -1,0 +1,62 @@
+
+// Mark: - Network
+"cannotParceData" = "Не удалось получить данные";
+"wrongCode" = "Неправильный код";
+"wrongEmail" = "Некорректная почта";
+"unknownError" = "Неизвестная ошибка";
+"errorSendPhoto" = "Не удалось загрузить фото";
+"badToken" = "Проблема с доступом к Вашему аккаунту";
+"badRoute" = "Нет такого URL";
+"badRequestDataFormat" = "Внутренняя ошибка сервера или неверный формат данных запроса";
+
+// Mark: - Common UI
+
+// Mark: LimitatableTextView
+"limit" = "осталось";
+"character" = "символ";
+"characterLess5" = "символа";
+"characters" = "символов";
+
+// Mark: Alerts
+"error" = "Ошибка!";
+"ok" = "OK";
+"cancel" = "Отмена";
+"continue" = "Продолжить";
+"select" = "Выбрать";
+"choose color" = "Выбор цвета";
+
+// Mark: Other
+"announcementText" = "Будет добавлено в следующих версиях";
+
+// Mark: - Screen modules
+
+// Mark: Common
+"appName" = "MacroCosm";
+
+// Mark: Main
+"settings" = "Настройки";
+"today" = "Today";
+"general" = "General";
+
+// TODO: add russian translation
+// Mark: Settings
+"changeBirthInformation" = "Change Birth Information";
+"support" = "Support";
+"rate App" = "Rate app";
+"informationAboutUs" = "Information about us";
+"aboutUs " = "About us";
+"legalInformation" = "Legal information";
+"termsOfUse" = "Terms of use";
+"privacyPolicy" = "Privacy policy";
+"version" = "Version";
+
+// Mark: UserInfoEditor
+"saveButton" = "save";
+"birthDayQuestion" = "What’s your Birth Day?";
+"birthTimeQuestion" = "What’s your Birth Time?";
+"birthPlaceQuestion" = "What’s your Birth Place?";
+"date" = "Date";
+"time" = "Time";
+"city" = "City";
+"datePickerTitleDate" = "Select your Birth Time";
+"datePickerTitleTime" = "Select your Birth Day";
