@@ -12,7 +12,7 @@ class AlertPresentationView: UIView {
     let backgroundView = UIView()
     let contentView = UIView()
     
-    var duration: TimeInterval = 0.4
+    var duration: TimeInterval = 0.3
     
     var transitionYContentMovingDelta: CGFloat = UIConstants.screenBounds.width * 0.6
 
@@ -41,7 +41,7 @@ class AlertPresentationView: UIView {
         let fraction = CGFloat(min(max(fractionCompletionState, -1), 1))
         let fractionAbs: CGFloat = abs(fraction)
         
-        let scaleModifier = (1 - fractionAbs) * 0.3 + 0.7
+        let scaleModifier = (1 - fractionAbs) * 0.05 + 0.95
         
         let transitionAction = { [ weak self ] in
             guard let self = self

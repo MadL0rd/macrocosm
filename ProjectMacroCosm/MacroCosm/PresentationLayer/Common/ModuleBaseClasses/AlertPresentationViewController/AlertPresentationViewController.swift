@@ -12,7 +12,7 @@ class AlertPresentationViewController: UIViewController {
     private var currentTranslationValue: CGFloat = 0
     private var currentFraction: Float = 0
     
-    private var alertPresentationView: AlertPresentationView {
+    private var _view: AlertPresentationView {
         return view as! AlertPresentationView
     }
 
@@ -32,13 +32,15 @@ class AlertPresentationViewController: UIViewController {
 
     private func configureSelf() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapToDismissHandler))
-        alertPresentationView.backgroundView.addGestureRecognizer(tap)
+        _view.backgroundView.addGestureRecognizer(tap)
         
-        configureGestures(view: alertPresentationView.backgroundView)
-        configureGestures(view: alertPresentationView.contentView)
+        configureGestures(view: _view.backgroundView)
+        configureGestures(view: _view.contentView)
         
-        alertPresentationView.setTransitionViewState(fractionCompletionState: -1, animated: false)
-        alertPresentationView.setTransitionViewState(fractionCompletionState: 0, animated: true)
+        _view.setTransitionViewState(fractionCompletionState: -1, animated: false)
+        DispatchQueue.main.async { [ weak self ] in
+            self?._view.setTransitionViewState(fractionCompletionState: 0, animated: true)
+        }
     }
     
     private func configureGestures(view: UIView) {
@@ -50,11 +52,11 @@ class AlertPresentationViewController: UIViewController {
     
     private func dismissThisController() {
         if currentFraction > 0 {
-            alertPresentationView.setTransitionViewState(fractionCompletionState: 1, animated: true)
+            _view.setTransitionViewState(fractionCompletionState: 1, animated: true)
         } else {
-            alertPresentationView.setTransitionViewState(fractionCompletionState: -1, animated: true)
+            _view.setTransitionViewState(fractionCompletionState: -1, animated: true)
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + alertPresentationView.duration) { [ weak self ] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + _view.duration) { [ weak self ] in
             self?.dismissSelf()
         }
     }
@@ -67,7 +69,7 @@ class AlertPresentationViewController: UIViewController {
     
     @objc private func dragView(_ sender: UIPanGestureRecognizer) {
         
-        let velocityVertical = abs(sender.velocity(in: alertPresentationView).y)
+        let velocityVertical = abs(sender.velocity(in: _view).y)
         
         let dragMaxValue = UIConstants.screenBounds.width * 0.5
         if sender.state == .began {
@@ -82,18 +84,18 @@ class AlertPresentationViewController: UIViewController {
                 dismissThisController()
                 return
             }
-            alertPresentationView.setTransitionViewState(fractionCompletionState: 0, animated: true)
+            _view.setTransitionViewState(fractionCompletionState: 0, animated: true)
             
         default:
-            let translation = sender.translation(in: alertPresentationView)
+            let translation = sender.translation(in: _view)
             currentTranslationValue += translation.y
-            sender.setTranslation(CGPoint.zero, in: alertPresentationView)
+            sender.setTranslation(CGPoint.zero, in: _view)
             
             let fraction = min(max(currentTranslationValue, -dragMaxValue), dragMaxValue) / dragMaxValue
             currentFraction = Float(fraction)
-            alertPresentationView.setTransitionViewState(fractionCompletionState: currentFraction,
-                                                         animated: true,
-                                                         duration: 0.1)
+            _view.setTransitionViewState(fractionCompletionState: currentFraction,
+                                         animated: true,
+                                         duration: 0.1)
         }
     }
     

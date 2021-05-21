@@ -37,6 +37,9 @@
 "settings" = "Settings";
 "today" = "Today";
 "general" = "General";
+"contentBlockScreenTitle" = "View for free";
+"contentBlockScreenText" = "Watch the video to find out weekly horoscope and support the developers";
+"contentBlockScreenWatchAdsButton" = "View for free after Ads";
 
 // Mark: About us
 "whoWeAre" = "\nWe are Developer and Designer\nfrom Cherry Dev Agency\n\nIf you want to make your idea a reality, write to us:";
@@ -54,6 +57,11 @@
 "termsOfUse" = "Terms of use";
 "privacyPolicy" = "Privacy policy";
 "version" = "Version";
+
+// Mark: DisableAdsPurchase
+"adsPurchaseTitle" = "Do you want to disable Ads permanently";
+"adsPurchaseText" = "After the purchase, you can watch your weekly horoscope without ads";
+"adsPurchaseButtonText" = "Buy disable ads";
 
 // Mark: UserInfoEditor
 "saveButton" = "save";

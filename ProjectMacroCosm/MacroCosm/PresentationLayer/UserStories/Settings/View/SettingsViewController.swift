@@ -136,8 +136,10 @@ final class SettingsViewController: UIViewController {
     }
     
     private func purchaseCheck() {
-        let loadingHUD = AlertManager.getLoadingHUD(on: _view)
-        loadingHUD.show(in: _view)
+//        let loadingHUD = AlertManager.getLoadingHUD(on: _view)
+//        loadingHUD.show(in: _view)
+        coordinator.openModule(.disableAdsPurchase, openingMode: .present)
+
 //        viewModel.checkSubscriptionsStatus { [ weak self ] isActive in
 //            guard let self = self
 //            else { return }

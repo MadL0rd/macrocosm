@@ -130,6 +130,15 @@
 		894066DE2613566800DC682F /* Array+isNotEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894066DD2613566800DC682F /* Array+isNotEmpty.swift */; };
 		8981FD9C26572F5600993B65 /* AlertPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FD9A26572F5600993B65 /* AlertPresentationView.swift */; };
 		8981FD9D26572F5600993B65 /* AlertPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FD9B26572F5600993B65 /* AlertPresentationViewController.swift */; };
+		8981FDC2265730DE00993B65 /* DisableAdsPurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FDB8265730DD00993B65 /* DisableAdsPurchaseViewModel.swift */; };
+		8981FDC3265730DE00993B65 /* DisableAdsPurchaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FDB9265730DD00993B65 /* DisableAdsPurchaseViewModelProtocol.swift */; };
+		8981FDC4265730DE00993B65 /* DisableAdsPurchaseCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FDBB265730DD00993B65 /* DisableAdsPurchaseCoordinatorProtocol.swift */; };
+		8981FDC5265730DE00993B65 /* DisableAdsPurchaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FDBC265730DD00993B65 /* DisableAdsPurchaseCoordinator.swift */; };
+		8981FDC6265730DE00993B65 /* DisableAdsPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FDBE265730DD00993B65 /* DisableAdsPurchaseView.swift */; };
+		8981FDC7265730DE00993B65 /* DisableAdsPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FDBF265730DD00993B65 /* DisableAdsPurchaseViewController.swift */; };
+		8981FDC8265730DE00993B65 /* DisableAdsPurchaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FDC0265730DE00993B65 /* DisableAdsPurchaseOutput.swift */; };
+		8981FDC9265730DE00993B65 /* DisableAdsPurchaseInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FDC1265730DE00993B65 /* DisableAdsPurchaseInput.swift */; };
+		8981FDCB2657368300993B65 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FDCA2657368300993B65 /* DefaultButton.swift */; };
 		899DE96C26434501001E2C7D /* CopyLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DE96B26434501001E2C7D /* CopyLabelView.swift */; };
 		899DE9702643452C001E2C7D /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DE96F2643452C001E2C7D /* CopyButton.swift */; };
 		899DE97226434E56001E2C7D /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DE97126434E56001E2C7D /* Contacts.swift */; };
@@ -308,6 +317,15 @@
 		894066DD2613566800DC682F /* Array+isNotEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+isNotEmpty.swift"; sourceTree = "<group>"; };
 		8981FD9A26572F5600993B65 /* AlertPresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentationView.swift; sourceTree = "<group>"; };
 		8981FD9B26572F5600993B65 /* AlertPresentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentationViewController.swift; sourceTree = "<group>"; };
+		8981FDB8265730DD00993B65 /* DisableAdsPurchaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisableAdsPurchaseViewModel.swift; sourceTree = "<group>"; };
+		8981FDB9265730DD00993B65 /* DisableAdsPurchaseViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisableAdsPurchaseViewModelProtocol.swift; sourceTree = "<group>"; };
+		8981FDBB265730DD00993B65 /* DisableAdsPurchaseCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisableAdsPurchaseCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		8981FDBC265730DD00993B65 /* DisableAdsPurchaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisableAdsPurchaseCoordinator.swift; sourceTree = "<group>"; };
+		8981FDBE265730DD00993B65 /* DisableAdsPurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisableAdsPurchaseView.swift; sourceTree = "<group>"; };
+		8981FDBF265730DD00993B65 /* DisableAdsPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisableAdsPurchaseViewController.swift; sourceTree = "<group>"; };
+		8981FDC0265730DE00993B65 /* DisableAdsPurchaseOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisableAdsPurchaseOutput.swift; sourceTree = "<group>"; };
+		8981FDC1265730DE00993B65 /* DisableAdsPurchaseInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisableAdsPurchaseInput.swift; sourceTree = "<group>"; };
+		8981FDCA2657368300993B65 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		899DE96A26433991001E2C7D /* MacroCosm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacroCosm.entitlements; sourceTree = "<group>"; };
 		899DE96B26434501001E2C7D /* CopyLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyLabelView.swift; sourceTree = "<group>"; };
 		899DE96F2643452C001E2C7D /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
@@ -673,6 +691,7 @@
 				8934C4F42613B81400B19069 /* LongPressDurationGestureRecognizer.swift */,
 				899DE96B26434501001E2C7D /* CopyLabelView.swift */,
 				899DE96F2643452C001E2C7D /* CopyButton.swift */,
+				8981FDCA2657368300993B65 /* DefaultButton.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -929,10 +948,49 @@
 		8981FD9926572F5600993B65 /* AlertPresentationViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8981FD9A26572F5600993B65 /* AlertPresentationView.swift */,
 				8981FD9B26572F5600993B65 /* AlertPresentationViewController.swift */,
+				8981FD9A26572F5600993B65 /* AlertPresentationView.swift */,
 			);
 			path = AlertPresentationViewController;
+			sourceTree = "<group>";
+		};
+		8981FDB6265730DD00993B65 /* DisableAdsPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				8981FDC1265730DE00993B65 /* DisableAdsPurchaseInput.swift */,
+				8981FDC0265730DE00993B65 /* DisableAdsPurchaseOutput.swift */,
+				8981FDB7265730DD00993B65 /* ViewModel */,
+				8981FDBA265730DD00993B65 /* Coordinator */,
+				8981FDBD265730DD00993B65 /* View */,
+			);
+			path = DisableAdsPurchase;
+			sourceTree = "<group>";
+		};
+		8981FDB7265730DD00993B65 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8981FDB8265730DD00993B65 /* DisableAdsPurchaseViewModel.swift */,
+				8981FDB9265730DD00993B65 /* DisableAdsPurchaseViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8981FDBA265730DD00993B65 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8981FDBB265730DD00993B65 /* DisableAdsPurchaseCoordinatorProtocol.swift */,
+				8981FDBC265730DD00993B65 /* DisableAdsPurchaseCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8981FDBD265730DD00993B65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8981FDBF265730DD00993B65 /* DisableAdsPurchaseViewController.swift */,
+				8981FDBE265730DD00993B65 /* DisableAdsPurchaseView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		89EECBC526151C30009242BF /* StorageService */ = {
@@ -1087,6 +1145,7 @@
 				8940661B261334B000DC682F /* UserInfoEditor */,
 				894066C7261355BB00DC682F /* AboutUs */,
 				89EECC3A26155E2A009242BF /* LocationPickerContainer */,
+				8981FDB6265730DD00993B65 /* DisableAdsPurchase */,
 			);
 			path = UserStories;
 			sourceTree = "<group>";
@@ -1124,8 +1183,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8CD3F5154BC273B2F9F803E /* Build configuration list for PBXNativeTarget "MacroCosm" */;
 			buildPhases = (
-				B9EBAA770C4B053E82FA1B2D /* [CP] Check Pods Manifest.lock */,
 				894064F9261230B600DC682F /* User stories modules accounting */,
+				B9EBAA770C4B053E82FA1B2D /* [CP] Check Pods Manifest.lock */,
 				55CE2F9D2520D6BD00FDE7A2 /* Rswift */,
 				0A19E07C48C7C4F98F7EDF1F /* Swiftlint */,
 				2525B7EE3A8AE1AD7AF73DB9 /* Sources */,
@@ -1346,6 +1405,7 @@
 				894064EF2612308800DC682F /* AnnouncementViewController.swift in Sources */,
 				894064E02612308800DC682F /* UIViewController+addChildViewControllerToView.swift in Sources */,
 				894066732613460400DC682F /* LabelsSegmentedControl.swift in Sources */,
+				8981FDC3265730DE00993B65 /* DisableAdsPurchaseViewModelProtocol.swift in Sources */,
 				894066112613316A00DC682F /* MainViewController.swift in Sources */,
 				8940652A2612327C00DC682F /* LoadingViewModel.swift in Sources */,
 				894064F32612308800DC682F /* ArrowDownButton.swift in Sources */,
@@ -1378,6 +1438,7 @@
 				89406629261334B000DC682F /* UserInfoEditorInput.swift in Sources */,
 				8940652F2612327C00DC682F /* LoadingViewController.swift in Sources */,
 				894066D4261355BC00DC682F /* AboutUsViewModel.swift in Sources */,
+				8981FDC8265730DE00993B65 /* DisableAdsPurchaseOutput.swift in Sources */,
 				894064DB2612308800DC682F /* UIView+TapAnimation.swift in Sources */,
 				89F00AB42542E16200D482F6 /* SceneDelegate.swift in Sources */,
 				899DE97226434E56001E2C7D /* Contacts.swift in Sources */,
@@ -1393,6 +1454,7 @@
 				8940669A26134F9E00DC682F /* Array+weakObjects.swift in Sources */,
 				894064D82612308800DC682F /* AlertManager.swift in Sources */,
 				8940645126122B7600DC682F /* CustomPatchEncoding.swift in Sources */,
+				8981FDCB2657368300993B65 /* DefaultButton.swift in Sources */,
 				89406628261334B000DC682F /* UserInfoEditorViewModel.swift in Sources */,
 				894064DF2612308800DC682F /* UIImageView+setDefaultLoadingInicator.swift in Sources */,
 				894064EE2612308800DC682F /* PaddingLabel.swift in Sources */,
@@ -1410,6 +1472,7 @@
 				8940645526122B7600DC682F /* NetworkErrors.swift in Sources */,
 				89EECC4C26155E2A009242BF /* LocationPickerContainerViewController.swift in Sources */,
 				894064ED2612308800DC682F /* LimitatableTextView.swift in Sources */,
+				8981FDC6265730DE00993B65 /* DisableAdsPurchaseView.swift in Sources */,
 				894064D92612308800DC682F /* ColorPickerView.swift in Sources */,
 				89EECC4926155E2A009242BF /* LocationPickerContainerCoordinator.swift in Sources */,
 				8934C51A2613C37D00B19069 /* TodayViewModelProtocol.swift in Sources */,
@@ -1429,13 +1492,16 @@
 				894064E52612308800DC682F /* UIView+shake.swift in Sources */,
 				8940668C261347AB00DC682F /* HorizontalLine.swift in Sources */,
 				89EECBB8261519BB009242BF /* UserInfo.swift in Sources */,
+				8981FDC9265730DE00993B65 /* DisableAdsPurchaseInput.swift in Sources */,
 				8940645426122B7600DC682F /* NetworkService.swift in Sources */,
 				8934C5222613C37D00B19069 /* GeneralViewModel.swift in Sources */,
+				8981FDC4265730DE00993B65 /* DisableAdsPurchaseCoordinatorProtocol.swift in Sources */,
 				8940669926134F9E00DC682F /* UserDefaults+color.swift in Sources */,
 				899DE96C26434501001E2C7D /* CopyLabelView.swift in Sources */,
 				8940664B261336A100DC682F /* SettingsCoordinator.swift in Sources */,
 				89406627261334B000DC682F /* UserInfoEditorViewModelProtocol.swift in Sources */,
 				89406648261336A100DC682F /* SettingsViewModelProtocol.swift in Sources */,
+				8981FDC5265730DE00993B65 /* DisableAdsPurchaseCoordinator.swift in Sources */,
 				8940645326122B7600DC682F /* DataParser.swift in Sources */,
 				894064E62612308800DC682F /* UIColor+rgba.swift in Sources */,
 				894065302612327C00DC682F /* LoadingInput.swift in Sources */,
@@ -1469,6 +1535,7 @@
 				8934C5282613C37D00B19069 /* GeneralViewController.swift in Sources */,
 				89EECC4A26155E2A009242BF /* LocationPickerContainerCoordinatorProtocol.swift in Sources */,
 				8940652D2612327C00DC682F /* LoadingCoordinatorProtocol.swift in Sources */,
+				8981FDC2265730DE00993B65 /* DisableAdsPurchaseViewModel.swift in Sources */,
 				8934C51E2613C37D00B19069 /* TodayViewController.swift in Sources */,
 				89EECBD72615529F009242BF /* UIViewController+alert.swift in Sources */,
 				89F00A9D2542E16200D482F6 /* UIConstants.swift in Sources */,
@@ -1481,6 +1548,7 @@
 				8940645726122B7600DC682F /* CompletionTypealiasesDefault.swift in Sources */,
 				8940660F2613316A00DC682F /* MainInput.swift in Sources */,
 				89406649261336A100DC682F /* SettingsViewModel.swift in Sources */,
+				8981FDC7265730DE00993B65 /* DisableAdsPurchaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
