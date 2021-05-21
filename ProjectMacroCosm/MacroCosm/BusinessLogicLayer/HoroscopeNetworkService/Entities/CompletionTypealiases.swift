@@ -6,4 +6,5 @@
 
 import Alamofire
 
-typealias GetSettingsCompletion = (Result<GetDaylyPredictionRequestResult, NetworkServiceError>) -> Void
+typealias GetPredictionCompletion = (Result<GetDaylyPredictionRequestResult, NetworkServiceError>) -> Void
+typealias GetDateCompletion = (Result<GetDateRequestResult, NetworkServiceError>) -> Void

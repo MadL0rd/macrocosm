@@ -8,6 +8,7 @@ import Foundation
 
 protocol HoroscopeNetworkServiceProtocol: AnyObject {
     
-    func getDaylyPrediction(zodiacId: Int, completion: @escaping GetSettingsCompletion)
+    func getDaylyPrediction(zodiacId: Int, completion: @escaping GetPredictionCompletion)
+    func getDate(completion: @escaping GetDateCompletion)
 }
 

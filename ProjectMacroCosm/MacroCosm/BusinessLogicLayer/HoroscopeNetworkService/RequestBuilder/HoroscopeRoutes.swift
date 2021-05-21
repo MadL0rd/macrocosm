@@ -11,6 +11,7 @@ enum HoroscopeRoutes: String, URLConvertible {
     static let endpoint = "http://80.78.247.50:8008/"
     
     case daylyPrediction = "api/zodiak/"
+    case date = "api/server_time/"
 
     func asURL() throws -> URL {
         guard let url = URL(string: HoroscopeRoutes.endpoint + self.rawValue)

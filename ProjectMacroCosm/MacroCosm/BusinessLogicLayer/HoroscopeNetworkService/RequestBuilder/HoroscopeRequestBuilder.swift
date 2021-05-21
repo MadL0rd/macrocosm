@@ -9,6 +9,7 @@ import Alamofire
 enum HoroscopeRequestBuilder {
     
     case daylyPrediction(zodiacId: Int)
+    case date
 }
 
 extension HoroscopeRequestBuilder: DataRequestExecutable {
@@ -19,6 +20,9 @@ extension HoroscopeRequestBuilder: DataRequestExecutable {
             let url = URL(string: "\(HoroscopeRoutes.endpoint)\(HoroscopeRoutes.daylyPrediction.rawValue)\(zodiacId)/")!
             
             return AF.request(url, method: .get)
+            
+        case .date:
+            return AF.request(HoroscopeRoutes.date)
         }
     }
 }

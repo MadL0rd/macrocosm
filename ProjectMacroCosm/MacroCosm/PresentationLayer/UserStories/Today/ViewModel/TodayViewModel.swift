@@ -5,6 +5,8 @@
 //  Created by Антон Текутов on 30.03.2021.
 //
 
+import Foundation
+
 final class TodayViewModel {
 	var output: TodayOutput?
     
@@ -49,6 +51,53 @@ extension TodayViewModel: TodayViewModelProtocol {
     
     func showRewardedAd(_ completion: @escaping ShowFullscreenRewardedAdCompletion) {
         adMobService.showFullscreenRewardedAd(completion)
+    }
+    
+    func canShowContentCheck(_ completion: @escaping(Bool) -> Void) {
+        guard let date = userInfoStorage.lastAdsWatchDate
+        else {
+            resetAdsWatchDate()
+            completion(true)
+            return
+        }
+        
+        horoscopeService.getDate { result in
+            switch result {
+            case .success(let data):
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = Contacts.defaultDateFormat
+                
+                let dateString = String(data.serverTime.prefix(19))
+                
+                guard let dateServer = dateFormatter.date(from: dateString),
+                      let weeksCountServer = Calendar.current.dateComponents([.weekOfYear], from: dateServer).weekOfYear,
+                      let weeksCountLocal = Calendar.current.dateComponents([.weekOfYear], from: date).weekOfYear
+                else {
+                    completion(false)
+                    return
+                }
+                
+                completion(weeksCountServer == weeksCountLocal)
+                
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+    }
+    
+    func resetAdsWatchDate() {
+        horoscopeService.getDate { [ weak self ] result in
+            switch result {
+            case .success(let data):
+                let dateString = String(data.serverTime.prefix(19))
+                self?.userInfoStorage.saveDate(dateString)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 

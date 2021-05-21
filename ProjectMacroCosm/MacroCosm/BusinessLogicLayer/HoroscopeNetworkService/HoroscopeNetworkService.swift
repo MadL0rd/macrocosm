@@ -15,8 +15,14 @@ class HoroscopeNetworkService: NetworkService {
 
 extension HoroscopeNetworkService: HoroscopeNetworkServiceProtocol {
     
-    func getDaylyPrediction(zodiacId: Int, completion: @escaping GetSettingsCompletion) {
+    func getDaylyPrediction(zodiacId: Int, completion: @escaping GetPredictionCompletion) {
         makeDefaultRequest(dataRequest: requestBuilder.daylyPrediction(zodiacId: zodiacId),
                            completion: completion)
     }
+    
+    func getDate(completion: @escaping GetDateCompletion) {
+        makeDefaultRequest(dataRequest: requestBuilder.date,
+                           completion: completion)
+    }
+
 }

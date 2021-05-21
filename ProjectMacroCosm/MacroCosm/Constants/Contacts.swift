@@ -10,4 +10,5 @@ import Foundation
 struct Contacts {
     
     static let mainContactEmail = "common@cherrydev.tech"
+    static let defaultDateFormat = "yyyy-MM-dd'T'HH:mm:ss"
 }

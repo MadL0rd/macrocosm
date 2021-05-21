@@ -50,6 +50,12 @@ final class TodayView: UIView {
             scroll.alpha = isActive ? 0 : 1
         }
     }
+    
+    func manageContentBlockViewVisibility(visible: Bool) {
+        UIView.animate(withDuration: 0.3) { [ weak self ] in
+            self?.contentBlockView.alpha = visible ? 1 : 0
+        }
+    }
 
     // MARK: - Private methods
     
@@ -61,6 +67,7 @@ final class TodayView: UIView {
         
         addSubview(contentBlockView)
         contentBlockView.translatesAutoresizingMaskIntoConstraints = false
+        contentBlockView.alpha = 0
                 
         makeConstraints()
     }

@@ -24,6 +24,13 @@ final class TodayViewController: UIViewController {
         self.view = TodayView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.canShowContentCheck { [ weak self ] canShowContent in
+            self?._view.manageContentBlockViewVisibility(visible: !canShowContent)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -68,7 +75,8 @@ final class TodayViewController: UIViewController {
             switch result {
             case .success:
                 print("Reward user")
-                self._view.contentBlockView.isHidden = true
+                self.viewModel.resetAdsWatchDate()
+                self._view.manageContentBlockViewVisibility(visible: false)
                 
             case .failure(let error):
                 print(error)
