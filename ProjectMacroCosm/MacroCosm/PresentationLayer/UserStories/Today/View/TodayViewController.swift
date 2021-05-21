@@ -31,6 +31,7 @@ final class TodayViewController: UIViewController {
     }
 
     private func configureSelf() {
+        _view.contentBlockView.adsDisableButton.addTarget(self, action: #selector(disableAdsPurchase), for: .touchUpInside)
         
         _view.predictionsTableView.dataSource = self
         _view.predictionsTableView.delegate = self
@@ -49,6 +50,25 @@ final class TodayViewController: UIViewController {
         // rewarded ads test
         loadAd()
     }
+    
+    private func setPrediction(_ prediction: ZodiacPrediction) {
+        _view.setLoadingState(isActive: false)
+        
+        _view.imageView.setDefaultLoadingInicator()
+        _view.imageView.sd_setImage(with: prediction.zodiacImageUrl, completed: nil)
+        _view.infoLabel.text = prediction.prediction.info
+        
+        predictionBlocks = prediction.prediction.predictionBlocks
+        _view.predictionsTableView.reloadData()
+    }
+    
+    // MARK: - UI elements actions
+
+    @objc private func disableAdsPurchase() {
+        coordinator.openModule(.disableAdsPurchase, openingMode: .present)
+    }
+    
+    // MARK: - Ads
     
     private func loadAd() {
         let request = GADRequest()
@@ -71,17 +91,6 @@ final class TodayViewController: UIViewController {
         ad.present(fromRootViewController: self) {
             print("Reward user")
         }
-    }
-    
-    private func setPrediction(_ prediction: ZodiacPrediction) {
-        _view.setLoadingState(isActive: false)
-        
-        _view.imageView.setDefaultLoadingInicator()
-        _view.imageView.sd_setImage(with: prediction.zodiacImageUrl, completed: nil)
-        _view.infoLabel.text = prediction.prediction.info
-        
-        predictionBlocks = prediction.prediction.predictionBlocks
-        _view.predictionsTableView.reloadData()
     }
 }
 

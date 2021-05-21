@@ -19,6 +19,8 @@ final class TodayView: UIView {
     
     let predictionsTableView = ContentFittingTableView()
     let footer = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 60))
+    
+    let contentBlockView = ContentBlockView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,6 +58,9 @@ final class TodayView: UIView {
         
         setupScroll()
         setupContentViews()
+        
+        addSubview(contentBlockView)
+        contentBlockView.translatesAutoresizingMaskIntoConstraints = false
                 
         makeConstraints()
     }
@@ -103,6 +108,11 @@ final class TodayView: UIView {
 
     private func makeConstraints() {
         NSLayoutConstraint.activate([
+            contentBlockView.topAnchor.constraint(equalTo: topAnchor),
+            contentBlockView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            contentBlockView.rightAnchor.constraint(equalTo: rightAnchor),
+            contentBlockView.leftAnchor.constraint(equalTo: leftAnchor),
+            
             refreshControl.centerXAnchor.constraint(equalTo: centerXAnchor),
             refreshControl.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -60),
             

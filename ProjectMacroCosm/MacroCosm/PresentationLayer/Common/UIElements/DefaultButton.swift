@@ -22,12 +22,20 @@ class DefaultButton: ButtonWithTouchSize {
         setupView()
     }
     
+    // MARK: - UI elements actions
+
+    @objc private func buttonDidTapped() {
+        tapAnimation()
+    }
+    
     // MARK: - Private setup methods
     
     private func setupView() {
         backgroundColor = R.color.backgroundDark()
         translatesAutoresizingMaskIntoConstraints = false
         setDefaultAreaPadding()
+        
+        addTarget(self, action: #selector(buttonDidTapped), for: .touchUpInside)
         
         addSubview(textLabel)
         textLabel.translatesAutoresizingMaskIntoConstraints = false
