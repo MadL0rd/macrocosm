@@ -23,11 +23,20 @@ class UserInfoStorageService: UserInfoStorageServiceProtocol {
     
     static let shared: UserInfoStorageServiceProtocol = UserInfoStorageService()
     
+    private let secureStorrage: SettingsStoring = SecureStorage.shared
+    private let dateFormatter = DateFormatter()
+    
     var subscribers = [Weak<UserInfoStorageServiceSubscriber>]()
     
     var userInfo: UserInfo {
         get { getUserInfo() }
         set { saveUserInfo(newValue) }
+    }
+    
+    var lastAdsWatchDate: Date? { getDate() }
+    
+    init() {
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
     }
     
     func subscribe(_ subscriber: UserInfoStorageServiceSubscriber) {
@@ -41,6 +50,16 @@ class UserInfoStorageService: UserInfoStorageServiceProtocol {
             subscriber.value?.needToReloadBorders()
         }
     }
+    
+    func saveDate(_ dateString: String) {
+        let dateString = String(dateString.prefix(19))
+        guard let _ = dateFormatter.date(from: dateString)
+        else { return }
+        
+        try? secureStorrage.set(dateString, for: .lastAdsWatchDate)
+    }
+    
+    // MARK: - Private methods
     
     private func saveUserInfo(_ info: UserInfo) {
         let encoder = JSONEncoder()
@@ -61,6 +80,14 @@ class UserInfoStorageService: UserInfoStorageServiceProtocol {
         }
         
         return info
+    }
+    
+    private func getDate() -> Date? {
+        guard let dateString = secureStorrage.getStringValue(for: .lastAdsWatchDate),
+              let date = dateFormatter.date(from: dateString)
+        else { return nil }
+
+        return date
     }
 }
 

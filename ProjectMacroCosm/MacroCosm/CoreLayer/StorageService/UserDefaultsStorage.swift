@@ -1,8 +1,8 @@
 //
 //  UserDefaultsStorage.swift
-//  Uapp
+//  MacroCosm
 //
-//  Created by Denis Severinov on 24.10.2020.
+//  Created by Антон Текутов on 01.04.2021.
 //
 
 import Foundation

@@ -129,6 +129,9 @@
 		894066DA261355BC00DC682F /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894066D2261355BB00DC682F /* AboutUsViewController.swift */; };
 		894066DE2613566800DC682F /* Array+isNotEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894066DD2613566800DC682F /* Array+isNotEmpty.swift */; };
 		896E8B3A2658062A005F88EC /* ContentBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896E8B392658062A005F88EC /* ContentBlockView.swift */; };
+		896E8B3E265842B3005F88EC /* AdMobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896E8B3D265842B3005F88EC /* AdMobService.swift */; };
+		896E8B40265842B9005F88EC /* AdMobServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896E8B3F265842B9005F88EC /* AdMobServiceProtocol.swift */; };
+		896E8B4326586171005F88EC /* AdsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896E8B4226586171005F88EC /* AdsModels.swift */; };
 		8981FD9C26572F5600993B65 /* AlertPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FD9A26572F5600993B65 /* AlertPresentationView.swift */; };
 		8981FD9D26572F5600993B65 /* AlertPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FD9B26572F5600993B65 /* AlertPresentationViewController.swift */; };
 		8981FDC2265730DE00993B65 /* DisableAdsPurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FDB8265730DD00993B65 /* DisableAdsPurchaseViewModel.swift */; };
@@ -317,6 +320,9 @@
 		894066D2261355BB00DC682F /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		894066DD2613566800DC682F /* Array+isNotEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+isNotEmpty.swift"; sourceTree = "<group>"; };
 		896E8B392658062A005F88EC /* ContentBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockView.swift; sourceTree = "<group>"; };
+		896E8B3D265842B3005F88EC /* AdMobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobService.swift; sourceTree = "<group>"; };
+		896E8B3F265842B9005F88EC /* AdMobServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobServiceProtocol.swift; sourceTree = "<group>"; };
+		896E8B4226586171005F88EC /* AdsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsModels.swift; sourceTree = "<group>"; };
 		8981FD9A26572F5600993B65 /* AlertPresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentationView.swift; sourceTree = "<group>"; };
 		8981FD9B26572F5600993B65 /* AlertPresentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentationViewController.swift; sourceTree = "<group>"; };
 		8981FDB8265730DD00993B65 /* DisableAdsPurchaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisableAdsPurchaseViewModel.swift; sourceTree = "<group>"; };
@@ -948,6 +954,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		896E8B3C265842AE005F88EC /* AdMobService */ = {
+			isa = PBXGroup;
+			children = (
+				896E8B3F265842B9005F88EC /* AdMobServiceProtocol.swift */,
+				896E8B3D265842B3005F88EC /* AdMobService.swift */,
+				896E8B4226586171005F88EC /* AdsModels.swift */,
+			);
+			path = AdMobService;
+			sourceTree = "<group>";
+		};
 		8981FD9926572F5600993B65 /* AlertPresentationViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1068,6 +1084,7 @@
 		89F00A3A2542E16200D482F6 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
+				896E8B3C265842AE005F88EC /* AdMobService */,
 				89EECC642615778F009242BF /* UserInfoStorageService */,
 				8934C5912613D8A300B19069 /* HoroscopeNetworkService */,
 			);
@@ -1496,6 +1513,7 @@
 				8940668C261347AB00DC682F /* HorizontalLine.swift in Sources */,
 				89EECBB8261519BB009242BF /* UserInfo.swift in Sources */,
 				8981FDC9265730DE00993B65 /* DisableAdsPurchaseInput.swift in Sources */,
+				896E8B4326586171005F88EC /* AdsModels.swift in Sources */,
 				8940645426122B7600DC682F /* NetworkService.swift in Sources */,
 				8934C5222613C37D00B19069 /* GeneralViewModel.swift in Sources */,
 				8981FDC4265730DE00993B65 /* DisableAdsPurchaseCoordinatorProtocol.swift in Sources */,
@@ -1508,6 +1526,7 @@
 				8940645326122B7600DC682F /* DataParser.swift in Sources */,
 				894064E62612308800DC682F /* UIColor+rgba.swift in Sources */,
 				894065302612327C00DC682F /* LoadingInput.swift in Sources */,
+				896E8B3E265842B3005F88EC /* AdMobService.swift in Sources */,
 				8934C5252613C37D00B19069 /* GeneralCoordinatorProtocol.swift in Sources */,
 				894066102613316A00DC682F /* MainOutput.swift in Sources */,
 				8940662A261334B000DC682F /* UserInfoEditorCoordinator.swift in Sources */,
@@ -1549,6 +1568,7 @@
 				894066122613316A00DC682F /* MainView.swift in Sources */,
 				8934C5202613C37D00B19069 /* TodayInput.swift in Sources */,
 				8940645726122B7600DC682F /* CompletionTypealiasesDefault.swift in Sources */,
+				896E8B40265842B9005F88EC /* AdMobServiceProtocol.swift in Sources */,
 				8940660F2613316A00DC682F /* MainInput.swift in Sources */,
 				89406649261336A100DC682F /* SettingsViewModel.swift in Sources */,
 				896E8B3A2658062A005F88EC /* ContentBlockView.swift in Sources */,

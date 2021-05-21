@@ -11,4 +11,5 @@ protocol TodayViewModelProtocol: AnyObject {
     var zodiacPredictionDidChanged: ((ZodiacPrediction) -> Void)? { get set }
 
     func loadData()
+    func showRewardedAd(_ completion: @escaping ShowFullscreenRewardedAdCompletion)
 }

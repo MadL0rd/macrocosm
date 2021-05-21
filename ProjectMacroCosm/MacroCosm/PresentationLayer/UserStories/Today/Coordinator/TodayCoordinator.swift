@@ -21,6 +21,7 @@ final class TodayCoordinator: DefaultCoordinator {
         
         viewModel.horoscopeService = HoroscopeNetworkService.shared
         viewModel.userInfoStorage = UserInfoStorageService.shared
+        viewModel.adMobService = AdMobService.shared
 
         if let configuration = configuration {
             configuration(viewModel)

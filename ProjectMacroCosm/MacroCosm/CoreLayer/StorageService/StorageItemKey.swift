@@ -1,15 +1,12 @@
 //
 //  StorageItemKey.swift
-//  Finassist
+//  MacroCosm
 //
-//  Created by Denis Severinov on 22.06.2020.
-//  Copyright © 2020 Storytelling Software. All rights reserved.
+//  Created by Антон Текутов on 01.04.2021.
 //
 
 import Foundation
 
 enum StorageItemKey: String {
-    case userToken
-    case isFirstLaunch
-    case currentUAppMode
+    case lastAdsWatchDate
 }

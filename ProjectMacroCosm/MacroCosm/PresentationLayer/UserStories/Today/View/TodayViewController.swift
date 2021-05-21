@@ -32,7 +32,8 @@ final class TodayViewController: UIViewController {
 
     private func configureSelf() {
         _view.contentBlockView.adsDisableButton.addTarget(self, action: #selector(disableAdsPurchase), for: .touchUpInside)
-        
+        _view.contentBlockView.adsWatchButton.addTarget(self, action: #selector(showAdBottonDidtapped), for: .touchUpInside)
+
         _view.predictionsTableView.dataSource = self
         _view.predictionsTableView.delegate = self
 
@@ -46,9 +47,34 @@ final class TodayViewController: UIViewController {
             }
         }
         viewModel.loadData()
+    }
+    
+    // MARK: - UI elements actions
+
+    @objc private func disableAdsPurchase() {
+        coordinator.openModule(.disableAdsPurchase, openingMode: .present)
+    }
+    
+    @objc private func showAdBottonDidtapped() {
         
-        // rewarded ads test
-        loadAd()
+        let loadingHUD = AlertManager.getLoadingHUD(on: view)
+        loadingHUD.show(in: view)
+        
+        viewModel.showRewardedAd { [ weak self ] result in
+            guard let self = self
+            else { return }
+            loadingHUD.dismiss()
+            
+            switch result {
+            case .success:
+                print("Reward user")
+                self._view.contentBlockView.isHidden = true
+                
+            case .failure(let error):
+                print(error)
+                AlertManager.showErrorHUD(on: self.view)
+            }
+        }
     }
     
     private func setPrediction(_ prediction: ZodiacPrediction) {
@@ -60,37 +86,6 @@ final class TodayViewController: UIViewController {
         
         predictionBlocks = prediction.prediction.predictionBlocks
         _view.predictionsTableView.reloadData()
-    }
-    
-    // MARK: - UI elements actions
-
-    @objc private func disableAdsPurchase() {
-        coordinator.openModule(.disableAdsPurchase, openingMode: .present)
-    }
-    
-    // MARK: - Ads
-    
-    private func loadAd() {
-        let request = GADRequest()
-        GADRewardedAd.load(withAdUnitID: "ca-app-pub-3940256099942544/1712485313",
-                           request: request) { [ weak self ] ad, error in
-            guard error == nil
-            else {
-                print(error!)
-                return
-            }
-            ad?.fullScreenContentDelegate = self
-            self?.rewardedAd = ad
-        }
-    }
-    
-    private func showAd() {
-        guard let ad = rewardedAd
-        else { return }
-        
-        ad.present(fromRootViewController: self) {
-            print("Reward user")
-        }
     }
 }
 
@@ -116,25 +111,6 @@ extension TodayViewController: UITableViewDataSource {
 extension TodayViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("kek")
-        tableView.cellForRow(at: indexPath)?.tapAnimation()
-        showAd()
-    }
-}
-
-// MARK: - GADFullScreenContentDelegate
-
-extension TodayViewController: GADFullScreenContentDelegate {
-    
-    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-        print(error)
-    }
-    
-    func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         
-    }
-    
-    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        loadAd()
     }
 }

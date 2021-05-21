@@ -20,6 +20,11 @@ final class LoadingViewController: UIViewController {
         self.view = LoadingView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.barStyle = .default
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

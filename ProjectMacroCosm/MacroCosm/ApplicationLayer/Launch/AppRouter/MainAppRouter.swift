@@ -32,7 +32,7 @@ class MainAppRouter: AppRouter {
     }
     
     func handleLaunch() {
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        AdMobService.shared.startConfiguration()
         openLoadingModule()
     }
     

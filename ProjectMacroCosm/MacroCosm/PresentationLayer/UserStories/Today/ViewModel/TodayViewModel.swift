@@ -9,6 +9,7 @@ final class TodayViewModel {
 	var output: TodayOutput?
     
     var horoscopeService: HoroscopeNetworkServiceProtocol!
+    var adMobService: AdMobServiceProtocol!
     var userInfoStorage: UserInfoStorageServiceProtocol! {
         didSet {
             userInfoStorage.subscribe(self)
@@ -44,6 +45,10 @@ extension TodayViewModel: TodayViewModelProtocol {
                 print(error)
             }
         }
+    }
+    
+    func showRewardedAd(_ completion: @escaping ShowFullscreenRewardedAdCompletion) {
+        adMobService.showFullscreenRewardedAd(completion)
     }
 }
 

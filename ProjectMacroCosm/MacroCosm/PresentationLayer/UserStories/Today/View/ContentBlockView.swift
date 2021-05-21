@@ -35,6 +35,7 @@ class ContentBlockView: UIView {
         blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = bounds
         blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurView.alpha = 0.99
         addSubview(blurView)
         
         addSubview(stack)
