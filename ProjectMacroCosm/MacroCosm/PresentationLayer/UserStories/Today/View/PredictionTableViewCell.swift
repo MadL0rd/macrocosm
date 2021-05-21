@@ -37,6 +37,7 @@ class PredictionTableViewCell: UITableViewCell {
     
     private func setupView() {
         backgroundColor = R.color.backgroundLight()
+        selectedBackgroundView = UIView()
         
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false

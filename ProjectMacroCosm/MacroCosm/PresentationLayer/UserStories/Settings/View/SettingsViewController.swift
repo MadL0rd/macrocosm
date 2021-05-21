@@ -62,6 +62,9 @@ final class SettingsViewController: UIViewController {
         module.rows.append(MenuRow(image: nil,
                                    title: R.string.localizable.changeBirthInformation(),
                                    action: { [ weak self ] in self?.coordinator.openModule(.userInfoEditor) }))
+        module.rows.append(MenuRow(image: R.image.removeAd(),
+                                   title: R.string.localizable.removeAd(),
+                                   action: { [ weak self ] in self?.purchaseCheck() }))
         module.rows.append(MenuRow(image: R.image.settingsSupport(),
                                    title: R.string.localizable.support(),
                                    action: {[ weak self ] in
@@ -72,6 +75,9 @@ final class SettingsViewController: UIViewController {
         module.rows.append(MenuRow(image: R.image.settingsRate(),
                                    title: R.string.localizable.rateApp(),
                                    action: { [ weak self ] in self?.viewModel.rateApp() }))
+        module.rows.append(MenuRow(image: R.image.settingsRestore(),
+                                   title: R.string.localizable.restorePurchase(),
+                                   action: { [ weak self ] in self?.restore() }))
         menu.append(module)
     }
     
@@ -106,6 +112,44 @@ final class SettingsViewController: UIViewController {
 
     @objc private func backButtonTapped() {
         coordinator.dismiss()
+    }
+    
+    private func restore() {
+        let loadingHUD = AlertManager.getLoadingHUD(on: _view)
+        loadingHUD.show(in: _view)
+//        viewModel.restorePurchases { [ weak self ] result in
+//            guard let self = self
+//            else { return }
+//            loadingHUD.dismiss()
+//            switch result {
+//            case .failed:
+//                AlertManager.showErrorHUD(on: self.view, withText: result.localized)
+//
+//            case .success:
+//                AlertManager.showSuccessHUD(on: self.view, withText: result.localized)
+//
+//            case .nothingToRestore:
+//                AlertManager.showErrorHUD(on: self.view, withText: result.localized)
+//
+//            }
+//        }
+    }
+    
+    private func purchaseCheck() {
+        let loadingHUD = AlertManager.getLoadingHUD(on: _view)
+        loadingHUD.show(in: _view)
+//        viewModel.checkSubscriptionsStatus { [ weak self ] isActive in
+//            guard let self = self
+//            else { return }
+//            loadingHUD.dismiss()
+//            switch isActive {
+//            case .active:
+//                AlertManager.showSuccessHUD(on: self.view,
+//                                            withText: NSLocalizedString("You already have active subscription!", comment: ""))
+//            case .notPurchased:
+//                self.coordinator.openModule(.subscription, openingMode: .present)
+//            }
+//        }
     }
 }
 

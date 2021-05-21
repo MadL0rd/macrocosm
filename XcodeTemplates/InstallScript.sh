@@ -10,10 +10,10 @@ errorColorPrint() {
 }
 
 remove() {
-  rm -r "$HOME/Library/Developer/Xcode/Templates/MVVM+Coordinator"
+  rm -r "$HOME/Library/Developer/Xcode/Templates/ViewModulesPatterns/MVVM-Coordinator.xctemplate"
 }
 
-DIR="$HOME/Library/Developer/Xcode/Templates/MVVM+Coordinator"
+DIR="$HOME/Library/Developer/Xcode/Templates/ViewModulesPatterns/MVVM-Coordinator.xctemplate"
 if [ -d "$DIR" ]
 then
   colorPrint "\n\tTemplate with the same name is already installed!\n\t\tDo you wish to replace it?\n"
@@ -28,11 +28,11 @@ then
   done
 fi
 
-cp -a "$(dirname "$0")/Templates/MVVM+Coordinator" ~/Library/Developer/Xcode/Templates
+cp -a "$(dirname "$0")/Templates/MVVM+Coordinator/MVVM-Coordinator.xctemplate" ~/Library/Developer/Xcode/Templates/ViewModulesPatterns
 if [ $? -ne 0 ]
 then
   errorColorPrint "\n\t\tError!\n"
   echo "there was an error" >> outputfile
 else
-  colorPrint "\n\t\tCompleted!\n\tTemplates was successfully installed!\n\tdir: ~/Library/Developer/Xcode/Templates\n\n"
+  colorPrint "\n\t\tCompleted!\n\tTemplates was successfully installed!\n\tdir: ~/Library/Developer/Xcode/Templates/ViewModulesPatterns\n\n"
 fi

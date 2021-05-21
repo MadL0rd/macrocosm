@@ -38,10 +38,16 @@
 "today" = "Today";
 "general" = "General";
 
+// Mark: About us
+"whoWeAre" = "\nWe are Developer and Designer\nfrom Cherry Dev Agency\n\nIf you want to make your idea a reality, write to us:";
+"cherryDev" = "Cherry Dev";
+
 // Mark: Settings
 "changeBirthInformation" = "Change Birth Information";
 "support" = "Support";
-"rate App" = "Rate app";
+"rateApp" = "Rate app";
+"removeAd" = "Disable Ads Permanently";
+"restorePurchase" = "Restore purchase";
 "informationAboutUs" = "Information about us";
 "aboutUs " = "About us";
 "legalInformation" = "Legal information";

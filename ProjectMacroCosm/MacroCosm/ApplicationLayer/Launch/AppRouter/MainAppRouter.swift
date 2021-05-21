@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class MainAppRouter: AppRouter {
     
@@ -31,6 +32,7 @@ class MainAppRouter: AppRouter {
     }
     
     func handleLaunch() {
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         openLoadingModule()
     }
     

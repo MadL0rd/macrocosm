@@ -12,6 +12,8 @@ target 'MacroCosm' do
   pod 'Alamofire'
   pod 'SwipeableTabBarController', '~> 3.2.1'
   pod 'LocationPicker'
+  
+  pod 'Google-Mobile-Ads-SDK'
 
 #  Exclude DEPLOYMENT_TARGET warnings
   post_install do |installer|

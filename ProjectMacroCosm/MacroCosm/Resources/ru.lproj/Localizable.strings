@@ -38,11 +38,17 @@
 "today" = "Today";
 "general" = "General";
 
+// Mark: About us
+"whoWeAre" = "\nМы - разработчик и дизайнер\nиз агенства Cherry Dev\n\nЕсли Вы хотите воплотить свою идею в реальность - свяжитесь с нами:";
+"cherryDev" = "Cherry Dev";
+
 // TODO: add russian translation
 // Mark: Settings
 "changeBirthInformation" = "Change Birth Information";
 "support" = "Support";
-"rate App" = "Rate app";
+"rateApp" = "Rate app";
+"removeAd" = "Disable Ads Permanently";
+"restorePurchase" = "Restore purchase";
 "informationAboutUs" = "Information about us";
 "aboutUs " = "About us";
 "legalInformation" = "Legal information";

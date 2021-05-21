@@ -97,7 +97,6 @@ final class TodayView: UIView {
         predictionsTableView.showsVerticalScrollIndicator = false
         predictionsTableView.estimatedRowHeight = 160
         predictionsTableView.rowHeight = UITableView.automaticDimension
-        predictionsTableView.allowsSelection = false
         predictionsTableView.register(PredictionTableViewCell.self,
                                       forCellReuseIdentifier: PredictionTableViewCell.identifier)
     }

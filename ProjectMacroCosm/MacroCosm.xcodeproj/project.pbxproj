@@ -128,6 +128,11 @@
 		894066D9261355BC00DC682F /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894066D1261355BB00DC682F /* AboutUsView.swift */; };
 		894066DA261355BC00DC682F /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894066D2261355BB00DC682F /* AboutUsViewController.swift */; };
 		894066DE2613566800DC682F /* Array+isNotEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894066DD2613566800DC682F /* Array+isNotEmpty.swift */; };
+		8981FD9C26572F5600993B65 /* AlertPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FD9A26572F5600993B65 /* AlertPresentationView.swift */; };
+		8981FD9D26572F5600993B65 /* AlertPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981FD9B26572F5600993B65 /* AlertPresentationViewController.swift */; };
+		899DE96C26434501001E2C7D /* CopyLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DE96B26434501001E2C7D /* CopyLabelView.swift */; };
+		899DE9702643452C001E2C7D /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DE96F2643452C001E2C7D /* CopyButton.swift */; };
+		899DE97226434E56001E2C7D /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DE97126434E56001E2C7D /* Contacts.swift */; };
 		89DD264B25DC9F0000AD2868 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD264A25DC9F0000AD2868 /* R.generated.swift */; };
 		89DD277225DCFB2C00AD2868 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89DD277025DCFB2C00AD2868 /* Images.xcassets */; };
 		89DD277325DCFB2C00AD2868 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89DD277125DCFB2C00AD2868 /* Colors.xcassets */; };
@@ -301,7 +306,12 @@
 		894066D1261355BB00DC682F /* AboutUsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		894066D2261355BB00DC682F /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		894066DD2613566800DC682F /* Array+isNotEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+isNotEmpty.swift"; sourceTree = "<group>"; };
+		8981FD9A26572F5600993B65 /* AlertPresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentationView.swift; sourceTree = "<group>"; };
+		8981FD9B26572F5600993B65 /* AlertPresentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentationViewController.swift; sourceTree = "<group>"; };
 		899DE96A26433991001E2C7D /* MacroCosm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacroCosm.entitlements; sourceTree = "<group>"; };
+		899DE96B26434501001E2C7D /* CopyLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyLabelView.swift; sourceTree = "<group>"; };
+		899DE96F2643452C001E2C7D /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
+		899DE97126434E56001E2C7D /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		89DD264A25DC9F0000AD2868 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		89DD277025DCFB2C00AD2868 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		89DD277125DCFB2C00AD2868 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -331,7 +341,7 @@
 		89F00A532542E16200D482F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AA50F899D423B5FD91BAA4EB /* Pods-MacroCosmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCosmTests.debug.xcconfig"; path = "Target Support Files/Pods-MacroCosmTests/Pods-MacroCosmTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C478B2B98E37F18BAC093DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		EEE75E08BB0BFE44AD9046BF /* MacroCosmTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MacroCosmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE75E08BB0BFE44AD9046BF /* MacroCosmTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = file; name = MacroCosmTests.xctest; path = MacroCosm.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A97D24E1314BC504A0C8C1 /* Pods-MacroCosm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCosm.debug.xcconfig"; path = "Target Support Files/Pods-MacroCosm/Pods-MacroCosm.debug.xcconfig"; sourceTree = "<group>"; };
 		FC03FAC3E2653A0CFEC93FAC /* Pods_MacroCosm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacroCosm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -632,6 +642,7 @@
 			isa = PBXGroup;
 			children = (
 				894064C82612308800DC682F /* ModuleTransitionHandler */,
+				8981FD9926572F5600993B65 /* AlertPresentationViewController */,
 				894064CB2612308800DC682F /* DefaultCoordinator.swift */,
 			);
 			path = ModuleBaseClasses;
@@ -660,6 +671,8 @@
 				894064D72612308800DC682F /* ButtonWithTouchSize.swift */,
 				8940668B261347AB00DC682F /* HorizontalLine.swift */,
 				8934C4F42613B81400B19069 /* LongPressDurationGestureRecognizer.swift */,
+				899DE96B26434501001E2C7D /* CopyLabelView.swift */,
+				899DE96F2643452C001E2C7D /* CopyButton.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -913,6 +926,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8981FD9926572F5600993B65 /* AlertPresentationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8981FD9A26572F5600993B65 /* AlertPresentationView.swift */,
+				8981FD9B26572F5600993B65 /* AlertPresentationViewController.swift */,
+			);
+			path = AlertPresentationViewController;
+			sourceTree = "<group>";
+		};
 		89EECBC526151C30009242BF /* StorageService */ = {
 			isa = PBXGroup;
 			children = (
@@ -977,6 +999,7 @@
 			isa = PBXGroup;
 			children = (
 				89F00A312542E16200D482F6 /* UIConstants.swift */,
+				899DE97126434E56001E2C7D /* Contacts.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -1336,6 +1359,7 @@
 				894064A226122D0100DC682F /* UserStoriesModulesAccounting.swift in Sources */,
 				89EECC682615778F009242BF /* UserInfoStorageService.swift in Sources */,
 				8934C59C2613D8A300B19069 /* HoroscopeNetworkService.swift in Sources */,
+				899DE9702643452C001E2C7D /* CopyButton.swift in Sources */,
 				8934C5292613C37D00B19069 /* GeneralOutput.swift in Sources */,
 				89F00AB32542E16200D482F6 /* AppDelegate.swift in Sources */,
 				894066722613460400DC682F /* SegmentedTabBar.swift in Sources */,
@@ -1348,6 +1372,7 @@
 				8940664C261336A100DC682F /* SettingsView.swift in Sources */,
 				8940652B2612327C00DC682F /* LoadingOutput.swift in Sources */,
 				89DD264B25DC9F0000AD2868 /* R.generated.swift in Sources */,
+				8981FD9D26572F5600993B65 /* AlertPresentationViewController.swift in Sources */,
 				8934C59F2613D8A300B19069 /* CompletionTypealiases.swift in Sources */,
 				89EECBCD26151C30009242BF /* UserDefaultsStorage.swift in Sources */,
 				89406629261334B000DC682F /* UserInfoEditorInput.swift in Sources */,
@@ -1355,6 +1380,7 @@
 				894066D4261355BC00DC682F /* AboutUsViewModel.swift in Sources */,
 				894064DB2612308800DC682F /* UIView+TapAnimation.swift in Sources */,
 				89F00AB42542E16200D482F6 /* SceneDelegate.swift in Sources */,
+				899DE97226434E56001E2C7D /* Contacts.swift in Sources */,
 				8934C5372613CAEB00B19069 /* PredictionModels.swift in Sources */,
 				89EECC4826155E2A009242BF /* LocationPickerContainerOutput.swift in Sources */,
 				894066D3261355BC00DC682F /* AboutUsViewModelProtocol.swift in Sources */,
@@ -1406,6 +1432,7 @@
 				8940645426122B7600DC682F /* NetworkService.swift in Sources */,
 				8934C5222613C37D00B19069 /* GeneralViewModel.swift in Sources */,
 				8940669926134F9E00DC682F /* UserDefaults+color.swift in Sources */,
+				899DE96C26434501001E2C7D /* CopyLabelView.swift in Sources */,
 				8940664B261336A100DC682F /* SettingsCoordinator.swift in Sources */,
 				89406627261334B000DC682F /* UserInfoEditorViewModelProtocol.swift in Sources */,
 				89406648261336A100DC682F /* SettingsViewModelProtocol.swift in Sources */,
@@ -1428,6 +1455,7 @@
 				894064E42612308800DC682F /* UIImage+merge.swift in Sources */,
 				894064F62612308800DC682F /* ButtonWithTouchSize.swift in Sources */,
 				8940669B26134F9E00DC682F /* Bundle+info.swift in Sources */,
+				8981FD9C26572F5600993B65 /* AlertPresentationView.swift in Sources */,
 				894065292612327C00DC682F /* LoadingViewModelProtocol.swift in Sources */,
 				8934C5232613C37D00B19069 /* GeneralViewModelProtocol.swift in Sources */,
 				894064F42612308800DC682F /* ContentFittingTableView.swift in Sources */,
@@ -1601,6 +1629,81 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleMobileAds\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"JGProgressHUD\"",
+					"-framework",
+					"\"LocationPicker\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Rswift\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SwipeableTabBarController\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UserMessagingPlatform\"",
+					"-framework",
+					"\"WebKit\"",
+					"-framework",
+					"\"nanopb\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+					"-weak_framework",
+					"\"JavaScriptCore\"",
+					"-weak_framework",
+					"\"SafariServices\"",
+					"-weak_framework",
+					"\"WebKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.atekutov.macrocosmapp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -1623,6 +1726,81 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleMobileAds\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"JGProgressHUD\"",
+					"-framework",
+					"\"LocationPicker\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Rswift\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SwipeableTabBarController\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UserMessagingPlatform\"",
+					"-framework",
+					"\"WebKit\"",
+					"-framework",
+					"\"nanopb\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+					"-weak_framework",
+					"\"JavaScriptCore\"",
+					"-weak_framework",
+					"\"SafariServices\"",
+					"-weak_framework",
+					"\"WebKit\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.atekutov.macrocosmapp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1658,6 +1836,81 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleMobileAds\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"JGProgressHUD\"",
+					"-framework",
+					"\"LocationPicker\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Rswift\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SwipeableTabBarController\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UserMessagingPlatform\"",
+					"-framework",
+					"\"WebKit\"",
+					"-framework",
+					"\"nanopb\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+					"-weak_framework",
+					"\"JavaScriptCore\"",
+					"-weak_framework",
+					"\"SafariServices\"",
+					"-weak_framework",
+					"\"WebKit\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.atekutov.macrocosmapp;
 				PROVISIONING_PROFILE_SPECIFIER = "";

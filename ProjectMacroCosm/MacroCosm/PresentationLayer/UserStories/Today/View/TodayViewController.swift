@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 final class TodayViewController: UIViewController {
 
@@ -13,6 +14,7 @@ final class TodayViewController: UIViewController {
     var coordinator: TodayCoordinatorProtocol!
     
     var predictionBlocks = [PredictionBlock]()
+    var rewardedAd: GADRewardedAd?
     
     private var _view: TodayView {
         return view as! TodayView
@@ -43,6 +45,32 @@ final class TodayViewController: UIViewController {
             }
         }
         viewModel.loadData()
+        
+        // rewarded ads test
+        loadAd()
+    }
+    
+    private func loadAd() {
+        let request = GADRequest()
+        GADRewardedAd.load(withAdUnitID: "ca-app-pub-3940256099942544/1712485313",
+                           request: request) { [ weak self ] ad, error in
+            guard error == nil
+            else {
+                print(error!)
+                return
+            }
+            ad?.fullScreenContentDelegate = self
+            self?.rewardedAd = ad
+        }
+    }
+    
+    private func showAd() {
+        guard let ad = rewardedAd
+        else { return }
+        
+        ad.present(fromRootViewController: self) {
+            print("Reward user")
+        }
     }
     
     private func setPrediction(_ prediction: ZodiacPrediction) {
@@ -79,6 +107,25 @@ extension TodayViewController: UITableViewDataSource {
 extension TodayViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("kek")
+        tableView.cellForRow(at: indexPath)?.tapAnimation()
+        showAd()
+    }
+}
+
+// MARK: - GADFullScreenContentDelegate
+
+extension TodayViewController: GADFullScreenContentDelegate {
+    
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print(error)
+    }
+    
+    func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         
+    }
+    
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        loadAd()
     }
 }
