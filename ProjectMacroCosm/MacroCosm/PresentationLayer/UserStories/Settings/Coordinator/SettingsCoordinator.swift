@@ -19,6 +19,8 @@ final class SettingsCoordinator: DefaultCoordinator {
 
         coordinator.transition = view
 
+        viewModel.purchaseManager = PurchaseManager.shared
+        
         if let configuration = configuration {
             configuration(viewModel)
         }

@@ -18,6 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return 
         }
         
+        PurchaseManager.shared.completeTransactions()
+        
         window = UIWindow(windowScene: windowScene)        
         window?.makeKeyAndVisible()
         

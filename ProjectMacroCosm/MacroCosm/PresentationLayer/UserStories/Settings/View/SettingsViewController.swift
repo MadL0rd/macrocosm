@@ -117,41 +117,40 @@ final class SettingsViewController: UIViewController {
     private func restore() {
         let loadingHUD = AlertManager.getLoadingHUD(on: _view)
         loadingHUD.show(in: _view)
-//        viewModel.restorePurchases { [ weak self ] result in
-//            guard let self = self
-//            else { return }
-//            loadingHUD.dismiss()
-//            switch result {
-//            case .failed:
-//                AlertManager.showErrorHUD(on: self.view, withText: result.localized)
-//
-//            case .success:
-//                AlertManager.showSuccessHUD(on: self.view, withText: result.localized)
-//
-//            case .nothingToRestore:
-//                AlertManager.showErrorHUD(on: self.view, withText: result.localized)
-//
-//            }
-//        }
+        viewModel.restorePurchases { [ weak self ] result in
+            guard let self = self
+            else { return }
+            loadingHUD.dismiss()
+            switch result {
+            case .failed:
+                AlertManager.showErrorHUD(on: self.view, withText: result.localized)
+
+            case .success:
+                AlertManager.showSuccessHUD(on: self.view, withText: result.localized)
+
+            case .nothingToRestore:
+                AlertManager.showErrorHUD(on: self.view, withText: result.localized)
+
+            }
+        }
     }
     
     private func purchaseCheck() {
-//        let loadingHUD = AlertManager.getLoadingHUD(on: _view)
-//        loadingHUD.show(in: _view)
-        coordinator.openModule(.disableAdsPurchase, openingMode: .present)
-
-//        viewModel.checkSubscriptionsStatus { [ weak self ] isActive in
-//            guard let self = self
-//            else { return }
-//            loadingHUD.dismiss()
-//            switch isActive {
-//            case .active:
-//                AlertManager.showSuccessHUD(on: self.view,
-//                                            withText: NSLocalizedString("You already have active subscription!", comment: ""))
-//            case .notPurchased:
-//                self.coordinator.openModule(.subscription, openingMode: .present)
-//            }
-//        }
+        let loadingHUD = AlertManager.getLoadingHUD(on: _view)
+        loadingHUD.show(in: _view)
+        
+        viewModel.checkPurchaseStatus { [ weak self ] isActive in
+            guard let self = self
+            else { return }
+            loadingHUD.dismiss()
+            switch isActive {
+            case .active:
+                AlertManager.showSuccessHUD(on: self.view,
+                                            withText: R.string.localizable.removeAdPurchaseActive())
+            case .notPurchased:
+                self.coordinator.openModule(.disableAdsPurchase, openingMode: .present)
+            }
+        }
     }
 }
 

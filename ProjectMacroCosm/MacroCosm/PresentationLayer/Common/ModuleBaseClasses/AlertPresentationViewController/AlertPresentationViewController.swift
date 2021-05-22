@@ -29,6 +29,21 @@ class AlertPresentationViewController: UIViewController {
 
         configureSelf()
     }
+    
+    // MARK: - Public methods
+    
+    func dismissThisController() {
+        if currentFraction > 0 {
+            _view.setTransitionViewState(fractionCompletionState: 1, animated: true)
+        } else {
+            _view.setTransitionViewState(fractionCompletionState: -1, animated: true)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + _view.duration) { [ weak self ] in
+            self?.dismissSelf()
+        }
+    }
+    
+    // MARK: - Private methods
 
     private func configureSelf() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapToDismissHandler))
@@ -48,17 +63,6 @@ class AlertPresentationViewController: UIViewController {
         
         let pan = UIPanGestureRecognizer(target: self, action: #selector(dragView(_:)))
         view.addGestureRecognizer(pan)
-    }
-    
-    private func dismissThisController() {
-        if currentFraction > 0 {
-            _view.setTransitionViewState(fractionCompletionState: 1, animated: true)
-        } else {
-            _view.setTransitionViewState(fractionCompletionState: -1, animated: true)
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + _view.duration) { [ weak self ] in
-            self?.dismissSelf()
-        }
     }
     
     // MARK: - UI elements actions

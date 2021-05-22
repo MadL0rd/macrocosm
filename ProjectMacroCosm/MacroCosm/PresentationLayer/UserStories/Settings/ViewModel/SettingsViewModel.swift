@@ -10,6 +10,9 @@ import StoreKit
 
 final class SettingsViewModel {
 	var output: SettingsOutput?
+    
+    var purchaseManager: PurchaseManagerProtocol!
+
 }
 
 // MARK: - Configuration
@@ -21,17 +24,34 @@ extension SettingsViewModel: CustomizableSettingsViewModel {
 extension SettingsViewModel: SettingsViewModelProtocol {
 
     var termsOfUsageUrl: URL? {
-        return URL(string: "http://80.78.247.50:8008/media/TermsConditions.html")
+        return purchaseManager.termsOfUsageUrl
     }
     var privacyPolicyUrl: URL? {
-        return URL(string: "http://80.78.247.50:8008/media/PrivacyPolicy.html")
+        return purchaseManager.privacyPolicyUrl
     }
     var supportUrl: URL? {
-        return URL(string: "https://vk.com/clubhouseborderedavatar")
+        return purchaseManager.supportUrl
     }
     
     func rateApp() {
-        SKStoreReviewController.requestReview()
+        purchaseManager.rateApp()
+    }
+    
+    func checkPurchaseStatus(_ completionHandler: @escaping(PurchaseVerification) -> Void) {
+        purchaseManager.checkActivePurchase { result in
+            switch result {
+            case .success(let isActive):
+                completionHandler(isActive)
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                completionHandler(.notPurchased)
+            }
+        }
+    }
+    
+    func restorePurchases(_ callback: @escaping RestorePurchasesCompletion) {
+        purchaseManager.restorePurchases(callback)
     }
 }
 

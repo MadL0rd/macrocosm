@@ -7,4 +7,6 @@
 
 protocol DisableAdsPurchaseViewModelProtocol: AnyObject {
     
+    func loadPurchasePrice(_ completion: @escaping(String) -> Void)
+    func buyDisableAdsPurchase(callback: @escaping(Bool) -> Void)
 }

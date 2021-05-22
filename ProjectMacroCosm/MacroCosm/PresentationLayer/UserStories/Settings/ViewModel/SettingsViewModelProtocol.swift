@@ -14,4 +14,6 @@ protocol SettingsViewModelProtocol: AnyObject {
     var supportUrl: URL? { get }
     
     func rateApp()
+    func checkPurchaseStatus(_ completionHandler: @escaping(PurchaseVerification) -> Void)
+    func restorePurchases(_ callback: @escaping RestorePurchasesCompletion)
 }

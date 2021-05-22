@@ -50,6 +50,7 @@
 "support" = "Support";
 "rateApp" = "Rate app";
 "removeAd" = "Disable Ads Permanently";
+"removeAdPurchaseActive" = "You already disable ads permanently";
 "restorePurchase" = "Restore purchase";
 "informationAboutUs" = "Information about us";
 "aboutUs " = "About us";

@@ -12,6 +12,7 @@ final class TodayViewModel {
     
     var horoscopeService: HoroscopeNetworkServiceProtocol!
     var adMobService: AdMobServiceProtocol!
+    var purchaseManager: PurchaseManagerProtocol!
     var userInfoStorage: UserInfoStorageServiceProtocol! {
         didSet {
             userInfoStorage.subscribe(self)
@@ -54,6 +55,23 @@ extension TodayViewModel: TodayViewModelProtocol {
     }
     
     func canShowContentCheck(_ completion: @escaping(Bool) -> Void) {
+        purchaseManager.checkActivePurchase { [ weak self ] result in
+            switch result {
+            case .success(let isActive):
+                if isActive == .active {
+                    completion(true)
+                    return
+                }
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+            
+            self?.canShowContentDateCheck(completion)
+        }
+    }
+    
+    private func canShowContentDateCheck(_ completion: @escaping(Bool) -> Void) {
         guard let date = userInfoStorage.lastAdsWatchDate
         else {
             resetAdsWatchDate()

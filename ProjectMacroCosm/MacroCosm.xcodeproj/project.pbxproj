@@ -149,6 +149,11 @@
 		89DD264B25DC9F0000AD2868 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD264A25DC9F0000AD2868 /* R.generated.swift */; };
 		89DD277225DCFB2C00AD2868 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89DD277025DCFB2C00AD2868 /* Images.xcassets */; };
 		89DD277325DCFB2C00AD2868 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89DD277125DCFB2C00AD2868 /* Colors.xcassets */; };
+		89E6085E265887FF00E6707C /* PurchaseManagerTypealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E60859265887FF00E6707C /* PurchaseManagerTypealiases.swift */; };
+		89E6085F265887FF00E6707C /* PurchaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6085A265887FF00E6707C /* PurchaseManagerProtocol.swift */; };
+		89E60860265887FF00E6707C /* PurchaseId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6085C265887FF00E6707C /* PurchaseId.swift */; };
+		89E60861265887FF00E6707C /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6085D265887FF00E6707C /* PurchaseManager.swift */; };
+		89E60863265888DF00E6707C /* LocalOnlyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E60862265888DF00E6707C /* LocalOnlyConstants.swift */; };
 		89EECBB8261519BB009242BF /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EECBB7261519BB009242BF /* UserInfo.swift */; };
 		89EECBCB26151C30009242BF /* SettingsStoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EECBC626151C30009242BF /* SettingsStoring.swift */; };
 		89EECBCC26151C30009242BF /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EECBC726151C30009242BF /* SecureStorage.swift */; };
@@ -340,6 +345,11 @@
 		89DD264A25DC9F0000AD2868 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		89DD277025DCFB2C00AD2868 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		89DD277125DCFB2C00AD2868 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		89E60859265887FF00E6707C /* PurchaseManagerTypealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseManagerTypealiases.swift; sourceTree = "<group>"; };
+		89E6085A265887FF00E6707C /* PurchaseManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseManagerProtocol.swift; sourceTree = "<group>"; };
+		89E6085C265887FF00E6707C /* PurchaseId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseId.swift; sourceTree = "<group>"; };
+		89E6085D265887FF00E6707C /* PurchaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		89E60862265888DF00E6707C /* LocalOnlyConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalOnlyConstants.swift; sourceTree = "<group>"; };
 		89EECBB7261519BB009242BF /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		89EECBC626151C30009242BF /* SettingsStoring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsStoring.swift; sourceTree = "<group>"; };
 		89EECBC726151C30009242BF /* SecureStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorage.swift; sourceTree = "<group>"; };
@@ -977,8 +987,8 @@
 			children = (
 				8981FDC1265730DE00993B65 /* DisableAdsPurchaseInput.swift */,
 				8981FDC0265730DE00993B65 /* DisableAdsPurchaseOutput.swift */,
-				8981FDB7265730DD00993B65 /* ViewModel */,
 				8981FDBA265730DD00993B65 /* Coordinator */,
+				8981FDB7265730DD00993B65 /* ViewModel */,
 				8981FDBD265730DD00993B65 /* View */,
 			);
 			path = DisableAdsPurchase;
@@ -987,8 +997,8 @@
 		8981FDB7265730DD00993B65 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8981FDB8265730DD00993B65 /* DisableAdsPurchaseViewModel.swift */,
 				8981FDB9265730DD00993B65 /* DisableAdsPurchaseViewModelProtocol.swift */,
+				8981FDB8265730DD00993B65 /* DisableAdsPurchaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1009,6 +1019,33 @@
 				8981FDBE265730DD00993B65 /* DisableAdsPurchaseView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		89E60857265887FF00E6707C /* PurchaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				89E60858265887FF00E6707C /* Utils */,
+				89E6085B265887FF00E6707C /* Entities */,
+				89E6085A265887FF00E6707C /* PurchaseManagerProtocol.swift */,
+				89E6085D265887FF00E6707C /* PurchaseManager.swift */,
+			);
+			path = PurchaseManager;
+			sourceTree = "<group>";
+		};
+		89E60858265887FF00E6707C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				89E60859265887FF00E6707C /* PurchaseManagerTypealiases.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		89E6085B265887FF00E6707C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				89E6085C265887FF00E6707C /* PurchaseId.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		89EECBC526151C30009242BF /* StorageService */ = {
@@ -1075,6 +1112,7 @@
 			isa = PBXGroup;
 			children = (
 				89F00A312542E16200D482F6 /* UIConstants.swift */,
+				89E60862265888DF00E6707C /* LocalOnlyConstants.swift */,
 				899DE97126434E56001E2C7D /* Contacts.swift */,
 			);
 			path = Constants;
@@ -1085,6 +1123,7 @@
 			children = (
 				896E8B3C265842AE005F88EC /* AdMobService */,
 				89EECC642615778F009242BF /* UserInfoStorageService */,
+				89E60857265887FF00E6707C /* PurchaseManager */,
 				8934C5912613D8A300B19069 /* HoroscopeNetworkService */,
 			);
 			path = BusinessLogicLayer;
@@ -1202,8 +1241,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8CD3F5154BC273B2F9F803E /* Build configuration list for PBXNativeTarget "MacroCosm" */;
 			buildPhases = (
-				894064F9261230B600DC682F /* User stories modules accounting */,
 				B9EBAA770C4B053E82FA1B2D /* [CP] Check Pods Manifest.lock */,
+				894064F9261230B600DC682F /* User stories modules accounting */,
 				55CE2F9D2520D6BD00FDE7A2 /* Rswift */,
 				0A19E07C48C7C4F98F7EDF1F /* Swiftlint */,
 				2525B7EE3A8AE1AD7AF73DB9 /* Sources */,
@@ -1445,6 +1484,7 @@
 				89F00AB02542E16200D482F6 /* AppRouter.swift in Sources */,
 				8940660B2613316A00DC682F /* MainViewModel.swift in Sources */,
 				89F00AB22542E16200D482F6 /* ApplicationAssembly.swift in Sources */,
+				89E6085F265887FF00E6707C /* PurchaseManagerProtocol.swift in Sources */,
 				8934C5AF2613F0BC00B19069 /* PredictionTableViewCell.swift in Sources */,
 				89EECBCB26151C30009242BF /* SettingsStoring.swift in Sources */,
 				894064E32612308800DC682F /* UIImage+overlayedColor.swift in Sources */,
@@ -1489,6 +1529,7 @@
 				894064E82612308800DC682F /* UITextField+placeholderPadding.swift in Sources */,
 				8934C51D2613C37D00B19069 /* TodayCoordinator.swift in Sources */,
 				8940645526122B7600DC682F /* NetworkErrors.swift in Sources */,
+				89E60863265888DF00E6707C /* LocalOnlyConstants.swift in Sources */,
 				89EECC4C26155E2A009242BF /* LocationPickerContainerViewController.swift in Sources */,
 				894064ED2612308800DC682F /* LimitatableTextView.swift in Sources */,
 				8981FDC6265730DE00993B65 /* DisableAdsPurchaseView.swift in Sources */,
@@ -1531,6 +1572,7 @@
 				8940662A261334B000DC682F /* UserInfoEditorCoordinator.swift in Sources */,
 				8940660E2613316A00DC682F /* MainCoordinator.swift in Sources */,
 				894066D6261355BC00DC682F /* AboutUsCoordinatorProtocol.swift in Sources */,
+				89E6085E265887FF00E6707C /* PurchaseManagerTypealiases.swift in Sources */,
 				894066DE2613566800DC682F /* Array+isNotEmpty.swift in Sources */,
 				894064EB2612308800DC682F /* UIViewController+ModuleTransitionHandler.swift in Sources */,
 				89EECC4726155E2A009242BF /* LocationPickerContainerViewModel.swift in Sources */,
@@ -1540,6 +1582,7 @@
 				894064DD2612308800DC682F /* UIView+RoundedCorners.swift in Sources */,
 				8940660D2613316A00DC682F /* MainCoordinatorProtocol.swift in Sources */,
 				894064E42612308800DC682F /* UIImage+merge.swift in Sources */,
+				89E60861265887FF00E6707C /* PurchaseManager.swift in Sources */,
 				894064F62612308800DC682F /* ButtonWithTouchSize.swift in Sources */,
 				8940669B26134F9E00DC682F /* Bundle+info.swift in Sources */,
 				8981FD9C26572F5600993B65 /* AlertPresentationView.swift in Sources */,
@@ -1562,6 +1605,7 @@
 				89F00A9D2542E16200D482F6 /* UIConstants.swift in Sources */,
 				8934C4F52613B81400B19069 /* LongPressDurationGestureRecognizer.swift in Sources */,
 				894064EC2612308800DC682F /* DefaultCoordinator.swift in Sources */,
+				89E60860265887FF00E6707C /* PurchaseId.swift in Sources */,
 				894064EA2612308800DC682F /* ModuleTransitionHandler.swift in Sources */,
 				8940662C261334B000DC682F /* UserInfoEditorOutput.swift in Sources */,
 				894066122613316A00DC682F /* MainView.swift in Sources */,
