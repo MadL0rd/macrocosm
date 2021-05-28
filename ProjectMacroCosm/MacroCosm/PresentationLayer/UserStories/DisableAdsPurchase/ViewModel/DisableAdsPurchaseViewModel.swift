@@ -24,7 +24,7 @@ extension DisableAdsPurchaseViewModel: CustomizableDisableAdsPurchaseViewModel {
 extension DisableAdsPurchaseViewModel: DisableAdsPurchaseViewModelProtocol {
 
     func loadPurchasePrice(_ completion: @escaping(String) -> Void) {
-        purchaseManager.getProductInfo(.disableAds)  { [ weak self ] product in
+        purchaseManager.getProductInfo(.disableAds) { [ weak self ] product in
             guard let self = self
             else { return }
             self.product = product

@@ -54,6 +54,7 @@ final class TodayView: UIView {
     func manageContentBlockViewVisibility(visible: Bool) {
         UIView.animate(withDuration: 0.3) { [ weak self ] in
             self?.contentBlockView.alpha = visible ? 1 : 0
+            self?.contentBlockView.stack.alpha = visible ? 1 : 0
         }
     }
 
@@ -67,7 +68,7 @@ final class TodayView: UIView {
         
         addSubview(contentBlockView)
         contentBlockView.translatesAutoresizingMaskIntoConstraints = false
-        contentBlockView.alpha = 0
+        contentBlockView.stack.alpha = 0
                 
         makeConstraints()
     }

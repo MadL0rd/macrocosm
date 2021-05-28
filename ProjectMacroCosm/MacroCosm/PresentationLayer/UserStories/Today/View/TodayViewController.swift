@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import GoogleMobileAds
+import JGProgressHUD
 
 final class TodayViewController: UIViewController {
 
@@ -14,7 +14,6 @@ final class TodayViewController: UIViewController {
     var coordinator: TodayCoordinatorProtocol!
     
     var predictionBlocks = [PredictionBlock]()
-    var rewardedAd: GADRewardedAd?
     
     private var _view: TodayView {
         return view as! TodayView
@@ -26,7 +25,14 @@ final class TodayViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        var loadingHUD: JGProgressHUD?
+        if _view.contentBlockView.alpha == 1,
+           _view.contentBlockView.stack.alpha == 0 {
+            loadingHUD = AlertManager.getLoadingHUD(on: view)
+        }
         viewModel.canShowContentCheck { [ weak self ] canShowContent in
+            loadingHUD?.dismiss()
             self?._view.manageContentBlockViewVisibility(visible: !canShowContent)
         }
     }
