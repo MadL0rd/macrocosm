@@ -21,9 +21,8 @@ class PurchaseManager: PurchaseManagerProtocol {
         return URL(string: "http://80.78.247.50:8008/media/PrivacyPolicy.html")
     }
     
-    //        TODO: update support url
     var supportUrl: URL? {
-        return URL(string: "https://vk.com/clubhouseborderedavatar")
+        return URL(string: "https://www.facebook.com/macrocosmos11111")
     }
     
     var purchaseIsActive: PurchaseVerification?
