@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 enum ModuleOpeningMode {
     
@@ -17,6 +18,8 @@ enum ModuleOpeningMode {
 protocol DefaultCoordinatorProtocol: AnyObject {
     
     func dismiss()
+    func openUrl(_ url: URL?)
+    func generateAnnouncementModule() -> UIViewController
     func openModule(_ module: UserStoriesModulesDefault, openingMode: ModuleOpeningMode)
     func openModuleWithOutput(_ module: UserStoriesModulesWithOutput, openingMode: ModuleOpeningMode)
 }
@@ -38,6 +41,21 @@ class DefaultCoordinator: DefaultCoordinatorProtocol {
     
     func dismiss() {
         transition.dismissSelf()
+    }
+    
+    func openUrl(_ url: URL?) {
+        guard let url = url
+        else { return }
+        
+        let config = SFSafariViewController.Configuration()
+        config.entersReaderIfAvailable = true
+        
+        let vc = SFSafariViewController(url: url, configuration: config)
+        transition.present(vc)
+    }
+    
+    func generateAnnouncementModule() -> UIViewController {
+        return AnnouncementViewController()
     }
     
     func openModule(_ module: UserStoriesModulesDefault, openingMode: ModuleOpeningMode) {

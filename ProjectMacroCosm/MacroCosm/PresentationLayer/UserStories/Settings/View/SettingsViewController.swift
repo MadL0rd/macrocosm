@@ -68,9 +68,7 @@ final class SettingsViewController: UIViewController {
         module.rows.append(MenuRow(image: R.image.settingsSupport(),
                                    title: R.string.localizable.support(),
                                    action: {[ weak self ] in
-                                    guard let url = self?.viewModel.supportUrl
-                                    else { return }
-                                    UIApplication.shared.open(url)
+                                    self?.coordinator.openUrl(self?.viewModel.supportUrl)
                                    }))
         module.rows.append(MenuRow(image: R.image.settingsRate(),
                                    title: R.string.localizable.rateApp(),
@@ -94,16 +92,12 @@ final class SettingsViewController: UIViewController {
         module.rows.append(MenuRow(image: R.image.settingsLegal(),
                                    title: R.string.localizable.termsOfUse(),
                                    action: { [ weak self ] in
-                                    guard let url = self?.viewModel.termsOfUsageUrl
-                                    else { return }
-                                    UIApplication.shared.open(url)
+                                    self?.coordinator.openUrl(self?.viewModel.termsOfUsageUrl)
                                    }))
         module.rows.append(MenuRow(image: R.image.settingsLegal(),
                                    title: R.string.localizable.privacyPolicy(),
-                                   action: {[ weak self ] in
-                                    guard let url = self?.viewModel.privacyPolicyUrl
-                                    else { return }
-                                    UIApplication.shared.open(url)
+                                   action: { [ weak self ] in
+                                    self?.coordinator.openUrl(self?.viewModel.privacyPolicyUrl)
                                    }))
         menu.append(module)
     }
