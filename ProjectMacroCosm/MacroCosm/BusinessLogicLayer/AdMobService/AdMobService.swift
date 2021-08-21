@@ -26,7 +26,7 @@ class AdMobService: NSObject, AdMobServiceProtocol {
     
     func loadFullscreenRewardedAd(_ completion: @escaping LoadFullscreenRewardedAdCompletion) {
         let request = GADRequest()
-        GADRewardedAd.load(withAdUnitID: AdUnitID.rewardedAdTest.rawValue,
+        GADRewardedAd.load(withAdUnitID: AdUnitID.rewardedAdProduction.rawValue,
                            request: request) { [ weak self ] ad, error in
             guard error == nil,
                   let ad = ad
