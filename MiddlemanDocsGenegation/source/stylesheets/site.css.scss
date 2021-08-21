@@ -74,10 +74,11 @@ main {
       border-bottom: 1px solid $tint-secondary-color;
     }
   }
+}
 
-  li a {
+li.homapage_menu {
+  a {
     font-size: larger;
     text-decoration: none;
   }
 }
-

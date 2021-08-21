@@ -3,7 +3,7 @@ title: Documents list
 ---
 
 <% current_resource.children.each do |page| %>
-    <li><a href="<%= page.path %>"> <span class="s1"><%= page.data.title %> </span> </a> <tr/> </li>
+    <li class="homapage_menu"><a href="<%= page.path %>"> <span class="s1"><%= page.data.title %> </span> </a> <tr/> </li>
 <% end %>
 
 
